@@ -1,9 +1,7 @@
 //mobil.java
 package uts.pck1;
-public class Mobil{
+public class Mobil extends Kendaraan{
 	//atribut
-	private String merk;
-	private String warna;
 	private Ban jenisBan;
 	private int jumlahBan;
 	private double isiTangki;

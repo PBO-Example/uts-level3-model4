@@ -1,6 +1,7 @@
 //TestLaptop.java
 package uts.pck1;
 
+import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
@@ -51,7 +52,28 @@ public class TestMobil {
 		Arguments.of(new Mobil("Hyundai Fuso","kuning",new Ban("Goodyear",200),8,80.0),300.50,"\nMobil sudah menempuh jarak 300.5 km, dan sisa isi tangki saat ini adalah 59.96666666666667 liter")
     );}
 	
+	@Test
+	public void testInheritance()
+	{ 
+		 rum = new Mobil();
+		 Kendaraan bangn=new Mobil(rum);
+		 assertEquals(rum, bangn);
+	}
+	@Test
+	public void testGetSetMerk() {
+		Kendaraan absCls = mock(
+		  Kendaraan.class, 
+		  CALLS_REAL_METHODS);
+		absCls.setMerk("Toyota Avanza");
+		  absCls.getMerk();
+	}
 	
+	@Test
+	public void testGetSetWarna() {
+		Kendaraan absCls = mock(Kendaraan.class, CALLS_REAL_METHODS);
+		absCls.setWarna("putih");
+		absCls.getWarna();
+	}
 	
 	@Test
 	public void testKonstruktorI()
