@@ -1,6 +1,6 @@
 //Kendaraan.java
 package uts.pck1;
-public abstract class Kendaraan{
+public  class Kendaraan{
 	//atribut
 	/*deklarasikan atribut di sini*/
 	
